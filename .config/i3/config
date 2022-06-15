@@ -185,7 +185,7 @@ hide_edge_borders both
 #start picom
 exec_always --no-startup-id picom --experimental-backends -b
 #set wallpaper
-exec_always --no-startup-id feh --bg-fill /home/charly/Pictures/Bridge.jpg
+exec_always --no-startup-id feh --bg-fill /home/charly/Pictures/Wallpaper.*
 #start polybar
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id ~/.local/bin/startup
