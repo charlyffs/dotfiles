@@ -52,6 +52,8 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+bracketright exec brightnessctl s 5%+
+bindsym $mod+bracketleft exec brightnessctl s 5%-
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -154,6 +156,7 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 # window colors
+
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #00ff00
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
@@ -169,9 +172,5 @@ exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id feh --bg-fill /home/charly/Pictures/Wallpaper.*
 #start polybar
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
-#keyboard layouts & shortcut
-exec_always --no-startup-id setxkbmap -layout us,latam
-exec_always --no-startup-id setxkbmap -option 'grp:win_space_toggle'
-#mouse sensitivity
-exec_always --no-startup-id xinput set-prop 'pointer:Logitech MX Master 3' 'libinput Accel Speed' -0.80
-exec_always --no-startup-id numlockx on
+#keyboard layouts, etc.
+exec_always --no-startup-id ~/.local/bin/startup
