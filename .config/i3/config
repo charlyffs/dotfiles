@@ -40,7 +40,7 @@ floating_modifier $mod
 ############# shortcuts ############# 
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
-bindsym $mod+x exec dolphin
+bindsym $mod+x exec dolphin ~
 bindsym $mod+d exec rofi -show drun 
 bindsym $mod+minus split v
 bindsym $mod+backslash split h
