@@ -7,6 +7,7 @@ set hlsearch
 set incsearch
 set nocompatible
 set linebreak
+set paste
 
 syntax on
 
