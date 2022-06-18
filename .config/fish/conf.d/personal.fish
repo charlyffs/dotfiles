@@ -5,4 +5,5 @@ alias raspisftp="sftp pi@192.168.1.93"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias wifi='nmtui'
 alias ls="ls -lh"
+alias media="cd /run/media/charly"
 neofetch
