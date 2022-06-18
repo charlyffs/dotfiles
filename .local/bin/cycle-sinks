@@ -1,0 +1,10 @@
+#!/bin/sh
+
+sinks=$(pacmd list-sinks | grep index | rev);
+lastSink=$(tail -n1 <<< $sinks | cut -c1);
+activeSink=$(grep \* <<< $sinks | cut -c1);
+activeSink=$((activeSink+1))
+if ((activeSink > lastSink)); then
+    activeSink=0
+fi
+pacmd set-default-sink $activeSink

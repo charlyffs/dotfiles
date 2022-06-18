@@ -58,6 +58,12 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+bracketright exec brightnessctl s 1%+
+bindsym $mod+bracketleft exec brightnessctl s 1%-
+bindsym $mod+Shift+bracketright exec pactl set-sink-volume @DEFAULT_SINK@ +2% 
+bindsym $mod+Shift+bracketleft exec pactl set-sink-volume @DEFAULT_SINK@ -2% 
+bindsym Ctrl+space exec playerctl play-pause
+bindsym $mod+Ctrl+space exec /home/charly/.local/bin/cycle-sinks
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
