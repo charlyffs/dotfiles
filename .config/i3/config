@@ -52,15 +52,21 @@ bindsym $mod+Shift+space floating toggle
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 bindsym $mod+bracketright exec brightnessctl s 1%+
 bindsym $mod+bracketleft exec brightnessctl s 1%-
-bindsym $mod+Shift+bracketright exec pactl set-sink-volume @DEFAULT_SINK@ +2% 
-bindsym $mod+Shift+bracketleft exec pactl set-sink-volume @DEFAULT_SINK@ -2% 
-bindsym Ctrl+space exec playerctl play-pause
-bindsym $mod+Ctrl+space exec /home/charly/.local/bin/cycle-sinks
-
+# brightness & volume controls 
+bindsym $mod+bracketright exec amixer set Master 5%+ 
+bindsym $mod+bracketleft exec amixer set Master 5%-
+# audio controls
+bindsym $mod+a mode "audio"
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+# cycle workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+# mute & pause / unmute & unpause everything
+bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@ on
+bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
 
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+BackSpace move scratchpad
@@ -130,6 +136,8 @@ bindsym $mod+r mode "resize"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
+        bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@ on
+        bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -145,6 +153,33 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
+}
+
+mode "audio" {
+        bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@ on
+        bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
+
+        bindsym space exec playerctl -a pause
+        bindsym p exec playerctl -a pause
+        # Brave controls
+        bindsym a exec playerctl -i spotify play-pause
+        bindsym s exec playerctl -i spotify previous 
+        bindsym d exec playerctl -i spotify volume 0.1+ 
+        bindsym f exec playerctl -i spotify volume 0.1- 
+        bindsym g exec playerctl -i spotify next 
+        # Spotify controls
+        bindsym semicolon exec playerctl -p spotify play-pause
+        bindsym h exec playerctl -p spotify previous
+        bindsym j exec playerctl -p spotify volume 0.1- 
+        bindsym k exec playerctl -p spotify volume 0.1+ 
+        bindsym l exec playerctl -p spotify next 
+
+        bindsym m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+        bindsym c exec /home/charly/.local/bin/cycle-sinks
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+a mode "default"
 }
 
 font pango: JetBrains Mono Nerd Font 6
