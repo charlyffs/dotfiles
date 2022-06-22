@@ -50,9 +50,9 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
-bindsym $mod+bracketright exec brightnessctl s 1%+
-bindsym $mod+bracketleft exec brightnessctl s 1%-
 # brightness & volume controls 
+bindsym $mod+Shift+bracketright exec brightnessctl s 2%+
+bindsym $mod+Shift+bracketleft exec brightnessctl s 2%-
 bindsym $mod+bracketright exec amixer set Master 5%+ 
 bindsym $mod+bracketleft exec amixer set Master 5%-
 # audio controls
