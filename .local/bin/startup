@@ -7,3 +7,4 @@ xinput set-prop 'SYNA2B31:00 06CB:7F8B Touchpad' 'libinput Natural Scrolling Ena
 xinput set-prop 'SYNA2B31:00 06CB:7F8B Touchpad' 'libinput Tapping Enabled' 1;
 numlockx on;
 nextcloud --background;
+xfce4-power-manager &
