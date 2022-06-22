@@ -1,8 +1,19 @@
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
 [General]
+ConfirmClosingMultipleTabs=false
+EditableUrl=true
+RememberOpenedTabs=false
+ShowFullPath=true
 Version=201
 ViewPropsTimestamp=2022,6,17,10,31,48.171
 
 [IconsMode]
+FontWeight=50
 PreviewSize=112
 
 [KFileDialog Settings]
@@ -10,7 +21,7 @@ Places Icons Auto-resize=false
 Places Icons Static Size=22
 
 [KPropertiesDialog]
-eDP-1 Height 1920x1080=615
+eDP-1 Height 1920x1080=589
 eDP-1 Width 1920x1080=447
 
 [MainWindow]
@@ -20,6 +31,9 @@ ToolBarsMovable=Disabled
 [Open-with settings]
 CompletionMode=1
 History=ala
+
+[PreviewSettings]
+Plugins=appimagethumbnail,windowsexethumbnail,jpegthumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,kraorathumbnail,windowsimagethumbnail,svgthumbnail,imagethumbnail,ebookthumbnail,opendocumentthumbnail,djvuthumbnail,exrthumbnail,mltpreview,directorythumbnail
 
 [Search]
 Location=Everywhere
