@@ -42,6 +42,9 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+x exec dolphin ~
 bindsym $mod+d exec rofi -show drun 
+bindsym $mod+i exec brave 
+bindsym $mod+u exec brave 'web.whatsapp.com' 'youtube.com' 
+bindsym $mod+o exec brave 'https://tailwindcss.com/docs/customizing-colors' 'https://mui.com/material-ui/'
 bindsym $mod+minus split v
 bindsym $mod+backslash split h
 bindsym $mod+f fullscreen toggle
