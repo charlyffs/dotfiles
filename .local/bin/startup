@@ -5,8 +5,4 @@ setxkbmap -option 'grp:win_space_toggle';
 #mouse sensitivity
 xinput set-prop 'pointer:Logitech MX Master 3' 'libinput Accel Speed' -0.80;
 numlockx on;
-<<<<<<< HEAD
-#nextcloud
-=======
 nextcloud --background;
->>>>>>> 1c6092b (Audio mode, updated keybinds, and vaious other changes)
