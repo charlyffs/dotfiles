@@ -212,7 +212,7 @@ font pango: JetBrains Mono Nerd Font 6
 #font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
-set $bg-color 	         #AFAFAF
+set $bg-color 	         #424242
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
