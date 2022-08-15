@@ -50,6 +50,9 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 bindsym $mod+x exec dolphin ~
 bindsym $mod+d exec rofi -show drun 
+bindsym $mod+i exec brave 
+bindsym $mod+u exec brave 'web.whatsapp.com' 'youtube.com' 
+bindsym $mod+o exec brave 'https://tailwindcss.com/docs/customizing-colors' 'https://mui.com/material-ui/'
 bindsym $mod+minus split v
 bindsym $mod+backslash split h
 bindsym $mod+f fullscreen toggle
@@ -67,6 +70,8 @@ bindsym $mod+a mode "audio"
 bindsym $mod+space focus mode_toggle
 # cycle workspaces
 bindsym $mod+Tab workspace next
+bindsym Mod4+Tab workspace next
+bindsym Mod4+Shift+Tab workspace prev
 bindsym $mod+Shift+Tab workspace prev
 # mute & pause / unmute & unpause everything
 bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@ on
@@ -205,7 +210,7 @@ font pango: JetBrains Mono Nerd Font 6
 #font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
-set $bg-color 	         #AFAFAF
+set $bg-color 	         #424242
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
