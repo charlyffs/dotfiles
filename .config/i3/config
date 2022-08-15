@@ -70,10 +70,15 @@ bindsym $mod+a mode "audio"
 bindsym $mod+space focus mode_toggle
 # cycle workspaces
 bindsym $mod+Tab workspace next
+bindsym Mod4+Tab workspace next
+bindsym Mod4+Shift+Tab workspace prev
 bindsym $mod+Shift+Tab workspace prev
 # mute & pause / unmute & unpause everything
 bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@ on
 bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
+bindsym $mod+p exec betterlockscreen --lock blur & systemctl suspend
+bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # bindsym $mod+a focus parent
 
