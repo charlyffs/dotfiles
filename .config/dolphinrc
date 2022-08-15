@@ -1,8 +1,17 @@
 [CompactMode]
 FontWeight=50
 
+[ContextMenu]
+ShowDuplicateHere=false
+ShowOpenTerminal=false
+
 [DetailsMode]
 FontWeight=50
+PreviewSize=64
+
+[ExtractDialog]
+eDP1 Height 1920x1080=558
+eDP1 Width 1920x1080=1274
 
 [General]
 ConfirmClosingMultipleTabs=false
@@ -23,8 +32,8 @@ Places Icons Static Size=22
 [KPropertiesDialog]
 eDP-1 Height 1920x1080=589
 eDP-1 Width 1920x1080=447
-eDP1 Height 1920x1080=433
-eDP1 Width 1920x1080=433
+eDP1 Height 1920x1080=537
+eDP1 Width 1920x1080=447
 
 [MainWindow]
 MenuBar=Disabled
@@ -32,7 +41,7 @@ ToolBarsMovable=Disabled
 
 [Open-with settings]
 CompletionMode=1
-History=ala
+History=viewn,ala
 
 [PreviewSettings]
 Plugins=appimagethumbnail,windowsexethumbnail,jpegthumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,kraorathumbnail,windowsimagethumbnail,svgthumbnail,imagethumbnail,ebookthumbnail,opendocumentthumbnail,djvuthumbnail,exrthumbnail,mltpreview,directorythumbnail
