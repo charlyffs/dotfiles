@@ -70,7 +70,7 @@ bindsym $mod+Shift+Tab workspace prev
 # mute & pause / unmute & unpause everything
 bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@ on
 bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
-bindsym $mod+p exec betterlockscreen --lock blur & systemctl suspend
+bindsym $mod+p exec systemctl suspend
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 bindsym --release $mod+semicolon exec --no-startup-id xdotool key --clearmodifiers Menu
@@ -217,6 +217,7 @@ exec_always --no-startup-id picom --experimental-backends -b
 #set wallpaper
 exec_always --no-startup-id feh --bg-fill /home/charly/Pictures/Wallpaper.*
 #start polybar
-exec_always --no-startup-id ~/.config/i3/polybar.sh &
+exec_always --no-startup-id ~/.config/i3/polybar.sh
 #keyboard layouts, etc.
 exec_always --no-startup-id ~/.local/bin/startup
+exec_always --no-startup-id light-locker --lock-on-suspend &
