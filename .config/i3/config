@@ -73,6 +73,7 @@ bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_
 bindsym $mod+p exec betterlockscreen --lock blur & systemctl suspend
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+bindsym --release $mod+semicolon exec --no-startup-id xdotool key --clearmodifiers Menu
 
 # bindsym $mod+a focus parent
 
