@@ -221,3 +221,4 @@ exec_always --no-startup-id ~/.config/i3/polybar.sh
 #keyboard layouts, etc.
 exec_always --no-startup-id ~/.local/bin/startup
 exec_always --no-startup-id light-locker --lock-on-suspend &
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
