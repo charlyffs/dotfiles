@@ -17,7 +17,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-
 #Gaps
 smart_borders on
 set $inner_gaps 8
@@ -78,7 +77,7 @@ bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@
 bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
 bindsym $mod+p exec systemctl suspend
 
-# bindsym $mod+a focus parent
+mouse_warping none
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+BackSpace move scratchpad
@@ -86,7 +85,6 @@ bindsym $mod+Shift+BackSpace move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+BackSpace scratchpad show
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
