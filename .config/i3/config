@@ -1,17 +1,9 @@
-# Start XDG autostart .desktop files using dex. See also
-exec --no-startup-id dex --autostart --environment i4
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
 
 #Gaps
 smart_borders on
@@ -69,11 +61,13 @@ bindsym Mod4+Shift+Tab workspace prev
 bindsym $mod+Shift+Tab workspace prev
 # mute & pause / unmute & unpause everything
 bindsym Ctrl+space exec playerctl -a pause && pactl set-sink-mute @DEFAULT_SINK@ on
-bindsym Ctrl+Shift+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
+bindsym $mod+Ctrl+space exec playerctl -a play && pactl set-sink-mute @DEFAULT_SINK@ off
 bindsym $mod+p exec systemctl suspend
+bindsym $mod+Ctrl+Shift+p exec poweroff
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 bindsym --release $mod+semicolon exec --no-startup-id xdotool key --clearmodifiers Menu
+bindsym --release $mod+Delete exec xkill
 
 # bindsym $mod+a focus parent
 
@@ -83,7 +77,6 @@ bindsym $mod+Shift+BackSpace move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+BackSpace scratchpad show
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -153,10 +146,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $right       resize shrink width 10 px or 10 ppt
+        bindsym $left      resize shrink width 10 px or 10 ppt
         bindsym $up       resize grow height 10 px or 10 ppt
         bindsym $down         resize shrink height 10 px or 10 ppt
-        bindsym $left      resize grow width 10 px or 10 ppt
+        bindsym $right       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -218,7 +211,12 @@ exec_always --no-startup-id picom --experimental-backends -b
 exec_always --no-startup-id feh --bg-fill /home/charly/Pictures/Wallpaper.*
 #start polybar
 exec_always --no-startup-id ~/.config/i3/polybar.sh
-#keyboard layouts, etc.
+#misc settings
 exec_always --no-startup-id ~/.local/bin/startup
+#screen locker
 exec_always --no-startup-id light-locker --lock-on-suspend &
+#interactive authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#clipboard history
+exec_always --no-startup-id copyq --start-server
+exec_always --no-startup-id nm-applet
