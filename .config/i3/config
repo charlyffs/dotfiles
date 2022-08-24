@@ -69,7 +69,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 bindsym --release $mod+semicolon exec --no-startup-id xdotool key --clearmodifiers Menu
 bindsym --release $mod+Delete exec xkill
 
-# bindsym $mod+a focus parent
+mouse_warping none
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+BackSpace move scratchpad
@@ -109,6 +109,18 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+#set monitors
+workspace 1 output $primary
+workspace 2 output $primary
+workspace 3 output $primary
+workspace 4 output $primary
+workspace 5 output $primary
+workspace 6 output $secondary
+workspace 7 output $secondary
+workspace 8 output $secondary
+workspace 9 output $secondary
+workspace 10 output $secondary
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
