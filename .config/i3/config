@@ -223,18 +223,11 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #no next window indicator
 hide_edge_borders both
 
-#start picom
-exec_always --no-startup-id picom --experimental-backends -b
-#set wallpaper
-exec_always --no-startup-id feh --bg-fill /home/charly/Pictures/Wallpaper.*
-#start polybar
-exec_always --no-startup-id ~/.config/i3/polybar.sh
-#misc settings
-exec_always --no-startup-id ~/.local/bin/startup
-#screen locker
 exec_always --no-startup-id light-locker --lock-on-suspend &
-#interactive authentication agent
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-#clipboard history
-exec_always --no-startup-id copyq --start-server
-exec_always --no-startup-id nm-applet
+exec_always --no-startup-id ~/.config/i3/polybar.sh;
+exec_always --no-startup-id nm-applet;
+
+#other settings
+exec_always --no-startup-id ~/.local/bin/startup;
+exec_always --no-startup-id ~/.local/bin/startup;

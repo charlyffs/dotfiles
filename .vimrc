@@ -8,6 +8,7 @@ set incsearch
 set nocompatible
 set linebreak
 set paste
+set backspace=indent,eol,start
 
 syntax on
 
