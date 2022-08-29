@@ -225,3 +225,4 @@ exec_always --no-startup-id nm-applet;
 #other settings
 exec_always --no-startup-id ~/.local/bin/startup;
 exec_always --no-startup-id ~/.local/bin/wallpaper;
+exec_always --no-startup-id ~/.local/bin/peripherals;
