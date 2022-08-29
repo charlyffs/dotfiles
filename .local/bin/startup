@@ -1,18 +1,6 @@
 #!/bin/bash
-#keyboard layouts & shortcut
-setxkbmap -layout us,latam;
-setxkbmap -option 'grp:win_space_toggle';
-#mouse sensitivity
-xinput set-prop 'pointer:Logitech MX Master 3' 'libinput Accel Speed' -0.80;
-numlockx on;
-
-#startup programs
 nextcloud --background;
 xfce4-power-manager --daemon;
 picom --experimental-backends -b;
 copyq --start-server;
-
-#wallpaper
-wallpaperCount=$(ls ~/Pictures/ | grep Wallpaper | wc -l);
-chosenWallpaper=$((1 + $RANDOM % $wallpaperCount));
-feh --bg-fill /home/charly/Pictures/Wallpaper$chosenWallpaper.*;
+~/.local/bin/peripherals;
