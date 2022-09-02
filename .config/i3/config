@@ -223,12 +223,16 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #no next window indicator
 hide_edge_borders both
 
+exec_always --no-startup-id picom --experimental-backends -b;
+
+#these won't work if they're in the startup script, and I can't be bothered to figure out why
 exec_always --no-startup-id light-locker --lock-on-suspend &
+exec_always --no-startup-id copyq --start-server &
+exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec_always --no-startup-id ~/.config/i3/polybar.sh;
-exec_always --no-startup-id nm-applet;
 
 #other settings
-exec_always --no-startup-id ~/.local/bin/startup;
-exec_always --no-startup-id ~/.local/bin/wallpaper;
-exec_always --no-startup-id ~/.local/bin/peripherals;
+exec_always --no-startup-id ~/.local/bin/startup
+exec_always --no-startup-id ~/.local/bin/startPolybar
+exec_always --no-startup-id ~/.local/bin/wallpaper
+exec_always --no-startup-id ~/.local/bin/peripherals

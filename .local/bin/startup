@@ -1,5 +1,3 @@
 #!/bin/bash
-nextcloud --background;
-picom --experimental-backends -b;
-copyq --start-server;
-~/.local/bin/peripherals;
+
+nextcloud --background &&

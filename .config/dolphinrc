@@ -1,5 +1,19 @@
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+<<<<<<< HEAD
+=======
+
+[ContextMenu]
+ShowDuplicateHere=false
+ShowOpenTerminal=false
+
+[DetailsMode]
+PreviewSize=64
+
+[ExtractDialog]
+eDP1 Height 1920x1080=558
+eDP1 Width 1920x1080=1274
+>>>>>>> cbd02dc (Refactored startup)
 
 [General]
 ConfirmClosingMultipleTabs=false
