@@ -3,7 +3,5 @@
 setxkbmap -layout us,latam;
 setxkbmap -option 'grp:win_space_toggle';
 #mouse sensitivity
-xinput set-prop 'SYNA2B31:00 06CB:7F8B Touchpad' 'libinput Natural Scrolling Enabled' 1;
-xinput set-prop 'SYNA2B31:00 06CB:7F8B Touchpad' 'libinput Tapping Enabled' 1;
 xinput set-prop 'pointer:Logitech MX Master 3' 'libinput Accel Speed' -0.80;
 numlockx on;
