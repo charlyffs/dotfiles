@@ -1,12 +1,11 @@
-[CompactMode]
-FontWeight=50
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [ContextMenu]
 ShowDuplicateHere=false
 ShowOpenTerminal=false
 
 [DetailsMode]
-FontWeight=50
 PreviewSize=64
 
 [ExtractDialog]
@@ -18,11 +17,10 @@ ConfirmClosingMultipleTabs=false
 EditableUrl=true
 RememberOpenedTabs=false
 ShowFullPath=true
-Version=201
+Version=202
 ViewPropsTimestamp=2022,6,17,10,31,48.171
 
 [IconsMode]
-FontWeight=50
 PreviewSize=112
 
 [KFileDialog Settings]

@@ -1,6 +1,4 @@
 #!/bin/bash
-nextcloud --background;
-xfce4-power-manager --daemon;
-picom --experimental-backends -b;
-copyq --start-server;
-~/.local/bin/peripherals;
+
+nextcloud --background &&
+xfce4-power-manager --daemon &&
