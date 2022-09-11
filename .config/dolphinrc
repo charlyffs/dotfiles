@@ -1,7 +1,5 @@
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
-<<<<<<< HEAD
-=======
 
 [ContextMenu]
 ShowDuplicateHere=false
@@ -13,7 +11,6 @@ PreviewSize=64
 [ExtractDialog]
 eDP1 Height 1920x1080=558
 eDP1 Width 1920x1080=1274
->>>>>>> cbd02dc (Refactored startup)
 
 [General]
 ConfirmClosingMultipleTabs=false
@@ -31,6 +28,8 @@ Places Icons Auto-resize=false
 Places Icons Static Size=22
 
 [KPropertiesDialog]
+DVI-D-0 DVI-I-0 Height 1920x1080=589
+DVI-D-0 DVI-I-0 Width 1920x1080=467
 eDP-1 Height 1920x1080=589
 eDP-1 Width 1920x1080=447
 
