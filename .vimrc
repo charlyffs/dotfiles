@@ -21,7 +21,7 @@ set statusline+=%=
 set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 set laststatus=2
 
-hi statusline ctermfg=0 ctermbg=0
+hi statusline ctermfg=4 ctermbg=0
 hi LineNr term=bold ctermfg=Grey
 
 filetype plugin indent on
