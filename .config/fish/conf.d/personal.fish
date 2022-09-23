@@ -9,5 +9,5 @@ alias wifi="nmtui"
 alias ls="ls -lh"
 alias media="cd /run/media/charly"
 alias suspend="systemctl suspend"
-alias mac="ssh carlos.montano@192.168.1.151"
+alias mac="ssh carlos.montano@192.168.100.162"
 status --is-interactive; and neofetch;
