@@ -201,6 +201,7 @@ mode "audio" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+a mode "default"
+        bindsym $mod+Shift+q exec i3-msg mode "default" && i3-msg kill
 }
 
 font pango: JetBrains Mono Nerd Font 6
