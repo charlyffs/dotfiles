@@ -1,4 +1,4 @@
 #!/bin/bash
 
-nextcloud --background &&
-xfce4-power-manager --daemon &&
+nextcloud --background &
+xfce4-power-manager --daemon &
