@@ -301,19 +301,19 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#A2C2E020"
     foreground = "#ffffff"
-    timeout = 10
+    timeout = 6
     default_icon = /home/charly/.local/icons/noti-low.png
 
 [urgency_normal]
     background = "#D9D9D920"
     foreground = "#ffffff"
-    timeout = 10
+    timeout = 6
     default_icon = /home/charly/.local/icons/noti-normal.png
 
 [urgency_critical]
     background = "#E28A8A20"
     foreground = "#ffffff"
-    timeout = 15
+    timeout = 10
     default_icon = /home/charly/.local/icons/noti-high.png
 
 # Every section that isn't one of the above is interpreted as a rules to
