@@ -33,7 +33,9 @@ DVI-D-0 DVI-I-0 Width 1920x1080=467
 eDP-1 Height 1920x1080=589
 eDP-1 Width 1920x1080=447
 eDP1 Height 1920x1080=589
+eDP1 Height 1920x1080 eDP1=589
 eDP1 Width 1920x1080=449
+eDP1 Width 1920x1080 eDP1=449
 
 [MainWindow]
 MenuBar=Disabled
