@@ -218,7 +218,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #no next window indicator
 hide_edge_borders both
 
-exec_always --no-startup-id picom --experimental-backends -b;
+exec_always --no-startup-id picom -b;
 
 #these won't work if they're in the startup script, and I can't be bothered to figure out why
 exec_always --no-startup-id light-locker --lock-on-suspend &

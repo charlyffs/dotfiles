@@ -10,4 +10,6 @@ alias ls="ls -lhN"
 alias media="cd /run/media/charly"
 alias suspend="systemctl suspend"
 alias mac="ssh carlos.montano@192.168.1.151"
+alias update="sudo pacman -Syu"
+alias synctime="sudo timedatectl set-ntp false && sudo timedatectl set-ntp true"
 status --is-interactive; and neofetch;
