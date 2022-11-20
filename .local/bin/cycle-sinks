@@ -1,10 +1,12 @@
 #!/bin/sh
 
-sinks=$(pacmd list-sinks | grep index | rev);
-lastSink=$(tail -n1 <<< $sinks | cut -c1);
-activeSink=$(grep \* <<< $sinks | cut -c1);
-activeSink=$((activeSink+1))
-if ((activeSink > lastSink)); then
-    activeSink=0
+pacmd list-sinks | grep index | rev > sinks.txt;
+n=$(cat sinks.txt | wc -l);
+activeSinkNumber=$(cat sinks.txt | grep -n \* | cut -c1);
+activeSinkNumber=$(expr $activeSinkNumber + 1);
+if ((activeSinkNumber > n)); then
+    activeSinkNumber=1
 fi
-pacmd set-default-sink $activeSink
+activeSinkIndex=$(cat sinks.txt | sed -n "${activeSinkNumber}p" | cut -c1);
+pacmd set-default-sink $activeSinkIndex;
+rm sinks.txt;
