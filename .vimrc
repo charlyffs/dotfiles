@@ -23,6 +23,7 @@ set laststatus=2
 
 hi statusline ctermfg=4 ctermbg=0
 hi LineNr term=bold ctermfg=Grey
+hi Visual cterm=bold ctermbg=Gray ctermfg=Black
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -31,3 +32,16 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+
+Plug 'hashivim/vim-terraform'
+
+call plug#end()
+
