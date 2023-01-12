@@ -44,6 +44,10 @@ function fish_prompt
   echo -n -s $initial_indicator $whitespace $cwd $git_info $whitespace $ahead $status_indicator $whitespace
 end
 
+function fish_right_prompt
+    date '+%I:%M %p'
+end
+
 function _git_ahead
   set -l commits (command git rev-list --left-right '@{upstream}...HEAD' 2>/dev/null)
   if [ $status != 0 ]

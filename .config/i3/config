@@ -7,15 +7,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 #Gaps
 smart_borders on
-set $inner_gaps 8
-set $outer_gaps 0
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+gaps inner 8
+gaps outer 0
 
 for_window [class="^.*"] border pixel 2
-gaps inner $inner_gaps
-gaps outer $outer_gaps
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -36,7 +31,6 @@ bindsym $mod+x exec dolphin ~
 bindsym $mod+d exec rofi -show drun 
 bindsym $mod+i exec brave 
 bindsym $mod+u exec brave 'web.whatsapp.com' 'youtube.com' 
-bindsym $mod+o exec brave 'https://tailwindcss.com/docs/customizing-colors' 'https://mui.com/material-ui/'
 bindsym $mod+minus split v
 bindsym $mod+backslash split h
 bindsym $mod+f fullscreen toggle
@@ -50,6 +44,8 @@ bindsym $mod+Shift+bracketright exec brightnessctl s 2%+
 bindsym $mod+Shift+bracketleft exec brightnessctl s 2%-
 bindsym $mod+bracketright exec amixer set Master 5%+ 
 bindsym $mod+bracketleft exec amixer set Master 5%-
+bindsym $mod+Ctrl+Shift+bracketright exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym $mod+Ctrl+Shift+bracketleft exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 # audio controls
 bindsym $mod+a mode "audio"
 # change focus between tiling / floating windows
