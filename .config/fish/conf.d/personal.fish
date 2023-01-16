@@ -10,7 +10,7 @@ alias ls="ls -lhN"
 alias media="cd /run/media/charly"
 alias suspend="systemctl suspend"
 alias mac="ssh carlos.montano@192.168.1.151"
-alias syu="sudo pacman -Syu"
+alias syu="~/.local/bin/update"
 alias synctime="sudo timedatectl set-ntp false && sudo timedatectl set-ntp true"
 alias pkghist="grep 'installed' /var/log/pacman.log | awk -F' ' '{print \$1 \" \" \$4 \$NF}'"
 status --is-interactive; and neofetch;
