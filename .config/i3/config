@@ -31,8 +31,8 @@ set $right l
 
 set $mod Mod1
 
-set $primary DVI-D-0
-set $secondary DVI-I-0
+set $primary DVI-D-1
+set $secondary DVI-I-1
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
