@@ -1,7 +1,7 @@
 #i3 config file (v4)
 
 # for multi monitor
-exec --no-startup-id xrandr --output DVI-D-0 --left-of DVI-I-0 --auto
+exec --no-startup-id xrandr --output DVI-D-1 --left-of DVI-I-1 --auto
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
