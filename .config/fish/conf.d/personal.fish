@@ -13,4 +13,5 @@ alias mac="ssh carlos.montano@192.168.1.151"
 alias syu="sudo pacman -Syu"
 alias synctime="sudo timedatectl set-ntp false && sudo timedatectl set-ntp true"
 alias pkghist="grep 'installed' /var/log/pacman.log | awk -F' ' '{print \$1 \" \" \$4 \$NF}'"
+alias tf="terraform"
 status --is-interactive; and neofetch;
