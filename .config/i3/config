@@ -27,11 +27,11 @@ floating_modifier $mod
 ############# shortcuts ############# 
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
-bindsym $mod+x exec dolphin ~
+bindsym $mod+x exec dolphin
 bindsym $mod+d exec rofi -show drun 
 bindsym $mod+i exec brave 
 bindsym $mod+u exec brave --new-window 'web.whatsapp.com' 'youtube.com' 
-bindsym $mod+o exec brave --new-window 'cetys.blackboard.com'
+bindsym $mod+o exec brave --new-window 'github.com'
 bindsym $mod+minus split v
 bindsym $mod+backslash split h
 bindsym $mod+f fullscreen toggle
